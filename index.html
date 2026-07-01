@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Gitika ❤️</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+</head>
+
+<body>
+
+<!-- Loader -->
+<div id="loader">
+    <h1>❤️ Preparing Surprise... ❤️</h1>
+</div>
+
+<!-- Background -->
+<div class="stars"></div>
+<div class="hearts"></div>
+
+<!-- HERO -->
+<section class="hero">
+    <h3>Happy Birthday</h3>
+    <h1>Gitika ❤️</h1>
+    <p>You are my today and all of my tomorrows.</p>
+
+    <button onclick="openGift()">🎁 Open Surprise</button>
+</section>
+
+<!-- GIFT -->
+<section id="gift" class="hidden">
+    <div class="gift-box" onclick="revealMessage()">
+        🎁 Click Me
+    </div>
+</section>
+
+<!-- MESSAGE -->
+<section id="message" class="hidden">
+    <h2>Happy Birthday My Love ❤️</h2>
+    <p>
+        You make my world beautiful every day.
+        I am lucky to have you in my life.
+    </p>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery">
+    <h2>Memories ❤️</h2>
+    <div class="grid">
+        <img src="assets/images/photo1.jpg">
+        <img src="assets/images/photo2.jpg">
+        <img src="assets/images/photo3.jpg">
+        <img src="assets/images/photo4.jpg">
+        <img src="assets/images/photo5.jpg">
+        <img src="assets/images/photo6.jpg">
+        <img src="assets/images/photo7.jpg">
+        <img src="assets/images/photo8.jpg">
+    </div>
+</section>
+
+<!-- LOVE -->
+<section class="love">
+    <h2>A Letter For You 💌</h2>
+    <p>
+        Dear Gitika,<br><br>
+        You are my happiness, my peace, my love.<br>
+        I will always choose you ❤️
+    </p>
+</section>
+
+<!-- FINAL -->
+<section class="final">
+    <h1>Happy Birthday Gitika ❤️</h1>
+    <button onclick="celebrate()">Celebrate 🎆</button>
+</section>
+
+<script src="script.js"></script>
+
+</body>
+</html>
