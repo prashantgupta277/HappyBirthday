@@ -74,3 +74,18 @@ style.innerHTML = `
 }
 `;
 document.head.appendChild(style);
+
+
+// ================= MUSIC =================
+const music = document.getElementById("bgMusic");
+
+// ================= START EXPERIENCE =================
+function startExperience() {
+    document.getElementById("gift").classList.remove("hidden");
+
+    // try autoplay (browser may block)
+    music.play().catch(() => {
+        console.log("Tap needed for music");
+    });
+
+  }
