@@ -382,3 +382,129 @@ section{
     }
 
 }
+
+.star{
+
+    position:fixed;
+
+    width:15px;
+
+    height:15px;
+
+    background:#FFD700;
+
+    border-radius:50%;
+
+    box-shadow:0 0 12px gold;
+
+    animation:twinkle 2s infinite;
+
+    z-index:999;
+
+}
+
+@keyframes twinkle{
+
+    0%{
+
+        opacity:0;
+
+        transform:scale(.3);
+
+    }
+
+    50%{
+
+        opacity:1;
+
+        transform:scale(1.6);
+
+    }
+
+    100%{
+
+        opacity:0;
+
+        transform:scale(.3);
+
+    }
+
+}
+
+.floatingHeart{
+
+    position:fixed;
+
+    bottom:-40px;
+
+    font-size:28px;
+
+    animation:heartFly 6s linear forwards;
+
+    z-index:999;
+
+}
+
+@keyframes heartFly{
+
+    from{
+
+        transform:translateY(0);
+
+        opacity:1;
+
+    }
+
+    to{
+
+        transform:translateY(-110vh);
+
+        opacity:0;
+
+    }
+
+}
+
+.final-box{
+
+    min-height:100vh;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    padding:40px;
+
+    color:white;
+
+}
+
+.final-box h1{
+
+    font-size:60px;
+
+    color:#FFD700;
+
+}
+
+.final-box h2{
+
+    color:#ff80ab;
+
+}
+
+.final-box p{
+
+    max-width:700px;
+
+    line-height:2;
+
+    font-size:22px;
+
+}

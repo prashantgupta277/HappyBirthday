@@ -135,23 +135,106 @@ const music = document.getElementById("bgMusic");
 }
 
 
-function finalCelebration(){
+// function finalCelebration(){
 
-    for(let i=0;i<8;i++){
+    function finalCelebration() {
+
+    // Multiple confetti blasts
+    const duration = 6000;
+    const animationEnd = Date.now() + duration;
+
+    const interval = setInterval(() => {
+
+        if (Date.now() > animationEnd) {
+            clearInterval(interval);
+            return;
+        }
+
+        confetti({
+            particleCount: 80,
+            angle: 60,
+            spread: 80,
+            origin: { x: 0 }
+        });
+
+        confetti({
+            particleCount: 80,
+            angle: 120,
+            spread: 80,
+            origin: { x: 1 }
+        });
+
+        confetti({
+            particleCount: 120,
+            spread: 150,
+            origin: {
+                x: Math.random(),
+                y: Math.random() * 0.5
+            }
+        });
+
+    }, 300);
+
+    createStars();
+    createHearts();
+
+    setTimeout(() => {
+        document.getElementById("finalMessage").classList.remove("hidden");
+
+        document.getElementById("finalMessage").scrollIntoView({
+            behavior: "smooth"
+        });
+    }, 2500);
+}
+
+// }
+
+function createStars(){
+
+    for(let i=0;i<50;i++){
+
+        const star=document.createElement("div");
+
+        star.className="star";
+
+        star.style.left=Math.random()*100+"vw";
+
+        star.style.top=Math.random()*100+"vh";
+
+        star.style.animationDelay=Math.random()*3+"s";
+
+        document.body.appendChild(star);
 
         setTimeout(()=>{
 
-            confetti({
+            star.remove();
 
-                particleCount:200,
+        },6000);
 
-                spread:150,
+    }
 
-                origin:{y:0.6}
+}
+function createHearts(){
 
-            });
+    for(let i=0;i<40;i++){
 
-        },i*350);
+        const heart=document.createElement("div");
+
+        heart.className="floatingHeart";
+
+        heart.innerHTML="❤️";
+
+        heart.style.left=Math.random()*100+"vw";
+
+        heart.style.animationDelay=Math.random()*3+"s";
+
+        document.body.appendChild(heart);
+
+        setTimeout(()=>{
+
+            heart.remove();
+
+        },7000);
 
     }
 
