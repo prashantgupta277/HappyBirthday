@@ -265,3 +265,120 @@ section{
 .hidden {
     display: none !important;
 }
+
+
+#birthdayGift {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #090912, #16162c);
+}
+
+.gift-card {
+    width: 100%;
+    max-width: 750px;
+    padding: 50px;
+    text-align: center;
+    border-radius: 25px;
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255,255,255,0.15);
+    box-shadow: 0 20px 60px rgba(255,0,102,.25);
+    color: white;
+}
+
+.gift-card h3 {
+    color: #ff9ecb;
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+.amount {
+    font-size: 80px;
+    color: #FFD700;
+    margin: 25px 0;
+    animation: pulseGift 2s infinite;
+    word-break: break-word;
+}
+
+.gift-card h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.gift-card p {
+    font-size: 20px;
+    line-height: 1.8;
+    margin: 30px 0;
+}
+
+.gift-card button {
+    padding: 15px 35px;
+    border: none;
+    border-radius: 50px;
+    font-size: 18px;
+    cursor: pointer;
+    background: #ff4d88;
+    color: white;
+    transition: .3s;
+}
+
+.gift-card button:hover {
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+
+    #birthdayGift {
+        padding: 25px 15px;
+    }
+
+    .gift-card {
+        width: 100%;
+        padding: 25px 20px;
+        border-radius: 18px;
+    }
+
+    .gift-card h3 {
+        font-size: 22px;
+    }
+
+    .amount {
+        font-size: 48px;
+        margin: 20px 0;
+    }
+
+    .gift-card h2 {
+        font-size: 24px;
+    }
+
+    .gift-card p {
+        font-size: 16px;
+        line-height: 1.7;
+    }
+
+    .gift-card button {
+        width: 100%;
+        font-size: 16px;
+        padding: 14px;
+    }
+
+}
+
+@media (max-width: 400px) {
+
+    .amount {
+        font-size: 38px;
+    }
+
+    .gift-card h2 {
+        font-size: 20px;
+    }
+
+    .gift-card p {
+        font-size: 15px;
+    }
+
+}
