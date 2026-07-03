@@ -19,19 +19,35 @@ function openGift() {
 }
 
 // ================= REVEAL MESSAGE =================
-function revealMessage() {
-    document.getElementById("message").classList.remove("hidden");
+// function revealMessage() {
+//     document.getElementById("message").classList.remove("hidden");
 
-    // big celebration
+//     // big celebration
+//     confetti({
+//         particleCount: 300,
+//         spread: 120,
+//         origin: { y: 0.6 }
+//     });
+
+//     startHearts();
+// }
+function revealMessage() {
+    const message = document.getElementById("message");
+
+    message.classList.remove("hidden");
+
     confetti({
-        particleCount: 300,
-        spread: 120,
-        origin: { y: 0.6 }
+        particleCount: 250,
+        spread: 120
+    });
+
+    message.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
     });
 
     startHearts();
 }
-
 // ================= CELEBRATE =================
 function celebrate() {
     for (let i = 0; i < 5; i++) {
@@ -80,12 +96,79 @@ document.head.appendChild(style);
 const music = document.getElementById("bgMusic");
 
 // ================= START EXPERIENCE =================
-function startExperience() {
-    document.getElementById("gift").classList.remove("hidden");
+// function startExperience() {
+//   const music = document.getElementById("bgMusic");
 
-    // try autoplay (browser may block)
+//     music.play().catch(err => {
+//         console.log("Music couldn't start:", err);
+//     });
+
+//     openGift();
+//     document.getElementById("gift").classList.remove("hidden");
+
+//     // try autoplay (browser may block)
+//     music.play().catch(() => {
+//         console.log("Tap needed for music");
+//     });
+
+//   }
+
+  function startExperience() {
+    const gift = document.getElementById("gift");
+    const music = document.getElementById("bgMusic");
+
+    gift.classList.remove("hidden");
+
     music.play().catch(() => {
-        console.log("Tap needed for music");
+        console.log("User interaction required for music.");
     });
 
-  }
+    confetti({
+        particleCount: 150,
+        spread: 90
+    });
+
+    gift.scrollIntoView({
+        behavior: "smooth",
+        block: "center"
+    });
+}
+
+
+function finalCelebration(){
+
+    for(let i=0;i<8;i++){
+
+        setTimeout(()=>{
+
+            confetti({
+
+                particleCount:200,
+
+                spread:150,
+
+                origin:{y:0.6}
+
+            });
+
+        },i*350);
+
+    }
+
+}
+
+function showBirthdayGift() {
+   const gift = document.getElementById("birthdayGift");
+
+    gift.classList.remove("hidden");
+
+    gift.scrollIntoView({
+        behavior: "smooth",
+        block: "center"
+    });
+
+    confetti({
+        particleCount: 300,
+        spread: 120
+    });
+}

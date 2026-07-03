@@ -4,6 +4,9 @@
     box-sizing:border-box;
     font-family:'Poppins',sans-serif;
 }
+html {
+    scroll-behavior: smooth;
+}
 
 body{
     background:#070712;
@@ -170,4 +173,95 @@ section{
     font-size: 18px;
     line-height: 1.8;
     white-space: pre-line;
+}
+
+#birthdayGift{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:linear-gradient(135deg,#090912,#16162c);
+
+}
+
+.gift-card{
+
+    width:90%;
+
+    max-width:750px;
+
+    padding:60px;
+
+    text-align:center;
+
+    border-radius:25px;
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(15px);
+
+    border:1px solid rgba(255,255,255,.15);
+
+    box-shadow:0 20px 60px rgba(255,0,102,.25);
+
+}
+
+.gift-card h3{
+
+    color:#ff9ecb;
+
+    margin-bottom:25px;
+
+}
+
+.amount{
+
+    font-size:90px;
+
+    color:#FFD700;
+
+    margin:30px 0;
+
+    animation:pulseGift 2s infinite;
+
+}
+
+.gift-card p{
+
+    font-size:20px;
+
+    line-height:1.9;
+
+    margin:30px 0;
+
+}
+
+@keyframes pulseGift{
+
+    0%{
+
+        transform:scale(1);
+
+    }
+
+    50%{
+
+        transform:scale(1.08);
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+    }
+
+}
+.hidden {
+    display: none !important;
 }
